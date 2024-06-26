@@ -8,7 +8,7 @@ pipeline{
         }
         stage("NPM Audit"){
             steps{
-                bat 'npm audit'
+                bat 'npm audit fix --force'
             }
         }
         stage("Run integration tests"){
